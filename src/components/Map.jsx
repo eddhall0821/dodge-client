@@ -3,10 +3,12 @@ import { Plane } from "@react-three/drei";
 const Map = (props) => {
   return (
     <Plane
-      args={[10, 10]}
-      onContextMenu={(e) => props.handleClickMap(e)}
+      args={[50, 50]}
+      onContextMenu={(e) => props.handleRightClickMap(e)}
       onClick={(e) => props.handleClickMap(e)}
-    />
+    >
+      <meshStandardMaterial receiveShadow />
+    </Plane>
   );
 };
 
